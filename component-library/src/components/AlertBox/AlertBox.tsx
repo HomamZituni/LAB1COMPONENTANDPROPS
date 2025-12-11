@@ -1,5 +1,5 @@
 import '../../App.css';
-import { AlertBoxProps } from '../../types'; 
+import type { AlertBoxProps } from '../../types'; 
 export const AlertBox = ({ type, message, onClose, children}: AlertBoxProps) => {
 const alertStyles = {
 success: 'bg-green-100 border-green-500 text-green-700',
