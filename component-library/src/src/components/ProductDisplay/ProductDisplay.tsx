@@ -10,6 +10,14 @@ onAddToCart,
 children,
 }: ProductDisplayProps) => { return (
     <div className="border p-4 rounded">
+    {product.imageUrl && (
+    <img 
+    src={product.imageUrl}
+    alt={product.name}
+    className="w-32 h-32 object-cover rounded"
+    />
+    )}
+
       <h3>{product.name}</h3>
       <p className="text-lg font-bold">${product.price}</p>
       
