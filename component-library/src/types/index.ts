@@ -1,6 +1,8 @@
-//Alert Types 
+// Alert Types
+/** Defines the visual style and meaning of alert messages. */
 export type AlertType = 'success' | 'error' | 'warning' | 'info';
- 
+
+/** Props for AlertBox component that displays colored notification messages with optional close button and extra content. */
 export interface AlertBoxProps {
   type: AlertType;
   message: string;
@@ -8,8 +10,8 @@ export interface AlertBoxProps {
   children?: React.ReactNode;
 }
 
-
-//User Types and UserProfile Types
+// User Types and UserProfile Types
+/** Represents a user with basic profile information. */
 export interface User {
   id: string;
   name: string;
@@ -17,7 +19,8 @@ export interface User {
   role: string;
   avatarUrl?: string;
 }
- 
+
+/** Props for UserProfileCard component that displays user information with configurable sections and edit functionality. */
 export interface UserProfileCardProps {
   user: User;
   showEmail?: boolean;
@@ -26,8 +29,8 @@ export interface UserProfileCardProps {
   children?: React.ReactNode;
 }
 
-
 // Product Types
+/** Represents a product with pricing, description, and inventory information. */
 export interface Product {
   id: string;
   name: string;
@@ -36,7 +39,8 @@ export interface Product {
   imageUrl?: string;
   inStock: boolean;
 }
- 
+
+/** Props for ProductDisplay component that shows product details with toggleable sections and add-to-cart functionality. */
 export interface ProductDisplayProps {
   product: Product;
   showDescription?: boolean;

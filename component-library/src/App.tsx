@@ -6,8 +6,8 @@ import { AlertBox } from './components/AlertBox/AlertBox';
 function App() {
   const exampleUser = {
     id: '1',
-    name: 'John Doe',
-    email: 'john@example.com',
+    name: 'Homam Zituni',
+    email: 'homam@example.com',
     role: 'Developer',
     avatarUrl: '/Avatar.svg'
   };
