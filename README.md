@@ -1,4 +1,4 @@
-                                                                                                                        ##Reflection
+                                                                                                                        # Reflection
 
 1.) How did you handle optional props in your components? 
 By using the `?` operator to mark props as optional and provided default values in the component destructuring. Using the `&&` operators also conditionally rendered elements and the close button only appears when `OnClose` is provided. 
@@ -14,9 +14,9 @@ errors to be caught at compile time.
 4.) What challenges did you face when implementing component composition? 
 How to pass and render the `children` pop correctly. How to import the SVGs in correctly was also a huge challene. Figuring out the type-only imports to get the SVGs and other components to work properly on my webpage. 
 
-                                                                                                                    ##Example usage snippets
+                                                                                                                    ## Example usage snippets
 
-###AlertBox Example: 
+### AlertBox Example: 
 // Basic success alert
 <AlertBox type="success" message="Operation completed!" />
 
@@ -31,7 +31,7 @@ How to pass and render the `children` pop correctly. How to import the SVGs in c
 The type prop consoltr styling. onClose is optional and a close button appears when called. children allow additional content to be displayed below the message.
 
 
-###UserProfileCard Example:
+### UserProfileCard Example:
 // Full profile with edit button
 <UserProfileCard
 user={userData}
@@ -46,7 +46,7 @@ onEdit={(id) => handleEdit(id)}
 showEmail and showRole are defaulted to true. Pass onEdit callback to show an edit button. children can be used for extra profile details 
 
 
-###ProductDisplay Example:
+### ProductDisplay Example:
 // Full product with add-to-cart
 <ProductDisplay
 product={productData}
