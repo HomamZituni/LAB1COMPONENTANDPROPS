@@ -1,4 +1,3 @@
-import './App.css'
 import './App.css';
 import { UserProfileCard } from './components/UserProfileCard/UserProfileCard';
 import { ProductDisplay } from './components/ProductDisplay/ProductDisplay';
@@ -23,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="p-8">
+    <div className="app-container">
       <UserProfileCard user={exampleUser} />
       <ProductDisplay product={exampleProduct} />
       <AlertBox type="success" message="Components working!" />
@@ -32,5 +31,4 @@ function App() {
 }
 
 export default App;
-
 

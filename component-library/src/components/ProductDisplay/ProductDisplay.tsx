@@ -1,57 +1,44 @@
 import '../../App.css'; 
 import type { ProductDisplayProps } from '../../types';
 
-export const ProductDisplay =
-({
- product,
-showDescription = true,
-showStockStatus = true,
-onAddToCart,
-children,
-}: ProductDisplayProps) => { return (
-    <div className="border p-4 rounded">
-    {product.imageUrl && (
-    <img 
-    src={product.imageUrl}
-    alt={product.name}
-    className="w-32 h-32 object-cover rounded"
-    />
-    )}
+export const ProductDisplay = ({
+  product,
+  showDescription = true,
+  showStockStatus = true,
+  onAddToCart,
+  children,
+}: ProductDisplayProps) => {
+  return (
+    <div className="product-card">
+      {product.imageUrl && (
+        <img 
+          src={product.imageUrl}
+          alt={product.name}
+          className="product-image"
+        />
+      )}
 
       <h3>{product.name}</h3>
-      <p className="text-lg font-bold">${product.price}</p>
+      <p className="product-price">${product.price}</p>
       
-      {showDescription && <p>{product.description}</p>}
+      {showDescription && <p className="product-description">{product.description}</p>}
       
       {showStockStatus && (
-        <p>{product.inStock ? 'In Stock' : 'Out of Stock'}</p>
+        <span className={`stock-status ${product.inStock ? 'in-stock' : 'out-of-stock'}`}>
+          {product.inStock ? 'In Stock' : 'Out of Stock'}
+        </span>
       )}
       
       {onAddToCart && (
-        <button onClick={() => onAddToCart(product.id)}>
+        <button 
+          onClick={() => onAddToCart(product.id)} 
+          className="add-to-cart-btn"
+          disabled={!product.inStock}
+        >
           Add to Cart
         </button>
       )}
       
       {children}
     </div>
-  );
-};
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  ); }
