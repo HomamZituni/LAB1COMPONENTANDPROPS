@@ -1,4 +1,4 @@
-                                                                                                                        ###Reflection
+                                                                                                                        ##Reflection
 
 1.) How did you handle optional props in your components? 
 By using the `?` operator to mark props as optional and provided default values in the component destructuring. Using the `&&` operators also conditionally rendered elements and the close button only appears when `OnClose` is provided. 
@@ -14,7 +14,7 @@ errors to be caught at compile time.
 4.) What challenges did you face when implementing component composition? 
 How to pass and render the `children` pop correctly. How to import the SVGs in correctly was also a huge challene. Figuring out the type-only imports to get the SVGs and other components to work properly on my webpage. 
 
-                                                                                                                    ###Example usage snippets
+                                                                                                                    ##Example usage snippets
 
 ###AlertBox Example: 
 // Basic success alert
