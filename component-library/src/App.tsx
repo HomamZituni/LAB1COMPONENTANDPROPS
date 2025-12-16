@@ -2,6 +2,9 @@ import './App.css';
 import { UserProfileCard } from './components/UserProfileCard/UserProfileCard';
 import { ProductDisplay } from './components/ProductDisplay/ProductDisplay';
 import { AlertBox } from './components/AlertBox/AlertBox';
+import avatar from './assets/Avatar.svg';
+import headphones from './assets/Headphones.svg';
+
 
 function App() {
   const exampleUser = {
@@ -9,17 +12,19 @@ function App() {
     name: 'Homam Zituni',
     email: 'homam@example.com',
     role: 'Developer',
-    avatarUrl: '/Avatar.svg'
+    avatarUrl: avatar
   };
+
 
   const exampleProduct = {
     id: '1',
     name: 'Headphones',
     price: 99.99,
     description: 'Wireless headphones',
-    imageUrl: '/Headphones.svg',
+    imageUrl: headphones,
     inStock: true
   };
+
 
   return (
     <div className="app-container">
@@ -29,6 +34,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 
